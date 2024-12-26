@@ -100,10 +100,14 @@ export default function Calculator() {
             <Text>GBP</Text>
           </View>
 
-          <Button icon="backup-restore" mode="contained">
+          <Button
+            icon="backup-restore"
+            mode="contained"
+            onPress={handleconversion}
+          >
             Convert
           </Button>
-          <Divider style={styles.divider} onPress={handleconversion} />
+          <Divider style={styles.divider} />
 
           <Text variant="titleLarge">Result</Text>
           <TextInput
