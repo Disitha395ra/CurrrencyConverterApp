@@ -26,10 +26,11 @@ export default function Calculator() {
         const targetCurrency = checked2;
         const value = parseFloat(text);
 
-        if(isNaN(value)){
-            alert("Please Enter a Valid Number");
-            return;
-        }
+        if (isNaN(value) || text.trim() === "") {
+        alert("Please Enter a Valid Number");
+        setTextcon(""); 
+        return;
+    }
 
         const rate = conversionRates[sourceCurrency][targetCurrency];
         const convertedValue = value * rate;
