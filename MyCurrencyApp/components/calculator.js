@@ -24,7 +24,7 @@ export default function Calculator() {
     const handleconversion = () => {
         const sourceCurrency = checked1;
         const targetCurrency = checked2;
-        const value = parseFloat(text);
+        const value = Number(text);
 
         if (isNaN(value) || text.trim() === "") {
         alert("Please Enter a Valid Number");
