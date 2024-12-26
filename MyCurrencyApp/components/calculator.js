@@ -21,6 +21,10 @@ export default function Calculator() {
         GBP : {LKR:500, USD:1.25, GBP:1},
     }
 
+    const handleconversion = () => {
+
+    }
+
     return (
       <View style={styles.container}>
         <PaperProvider>
@@ -88,7 +92,7 @@ export default function Calculator() {
           <Button icon="backup-restore" mode="contained">
             Convert
           </Button>
-          <Divider style={styles.divider} />
+          <Divider style={styles.divider} onPress={handleconversion} />
 
           <Text variant="titleLarge">Result</Text>
           <TextInput
@@ -97,6 +101,7 @@ export default function Calculator() {
             onChangeText={(textcon) => setTextcon(textcon)}
             mode="outlined"
             style={styles.textinput}
+            editable={false}
           />
         </PaperProvider>
       </View>
