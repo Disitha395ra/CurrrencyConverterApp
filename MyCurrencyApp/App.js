@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View, ScrollView, Image } from "react-native";
 import { PaperProvider,Text,Divider } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
+import Calculator from "./components/calculator";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
               style={styles.banner}
             />
             <Divider style={styles.divider} />
+            <Calculator />
           </PaperProvider>
         </ScrollView>
       </SafeAreaView>
