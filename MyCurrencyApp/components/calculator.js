@@ -11,7 +11,8 @@ import React from "react";
 
 export default function Calculator() {
     const [text, setText] = React.useState("");
-    const [checked, setChecked] = React.useState("LKR");
+    const [checked1, setChecked1] = React.useState("LKR");
+    const [checked2, setChecked2] = React.useState("LKRConverted");
     const [textcon, setTextcon] = React.useState("");
     return (
       <View style={styles.container}>
@@ -20,24 +21,24 @@ export default function Calculator() {
           <View style={styles.radiobutton}>
             <RadioButton
               value="LKR"
-              status={checked === "LKR" ? "checked" : "unchecked"}
-              onPress={() => setChecked("LKR")}
+              status={checked1 === "LKR" ? "checked" : "unchecked"}
+              onPress={() => setChecked1("LKR")}
             />
             <Text>LKR</Text>
           </View>
           <View style={styles.radiobutton}>
             <RadioButton
               value="USD"
-              status={checked === "USD" ? "checked" : "unchecked"}
-              onPress={() => setChecked("USD")}
+              status={checked1 === "USD" ? "checked" : "unchecked"}
+              onPress={() => setChecked1("USD")}
             />
             <Text>USD</Text>
           </View>
           <View style={styles.radiobutton}>
             <RadioButton
               value="GBP"
-              status={checked === "GBP" ? "checked" : "unchecked"}
-              onPress={() => setChecked("GBP")}
+              status={checked1 === "GBP" ? "checked" : "unchecked"}
+              onPress={() => setChecked1("GBP")}
             />
             <Text>GBP</Text>
           </View>
@@ -55,24 +56,24 @@ export default function Calculator() {
           <View style={styles.radiobutton}>
             <RadioButton
               value="LKRConverted"
-              status={checked === "LKRConverted" ? "checked" : "unchecked"}
-              onPress={() => setChecked("LKRConverted")}
+              status={checked2 === "LKRConverted" ? "checked" : "unchecked"}
+              onPress={() => setChecked2("LKRConverted")}
             />
             <Text>LKR</Text>
           </View>
           <View style={styles.radiobutton}>
             <RadioButton
               value="USDConverted"
-              status={checked === "USDConverted" ? "checked" : "unchecked"}
-              onPress={() => setChecked("USDConverted")}
+              status={checked2 === "USDConverted" ? "checked" : "unchecked"}
+              onPress={() => setChecked2("USDConverted")}
             />
             <Text>USD</Text>
           </View>
           <View style={styles.radiobutton}>
             <RadioButton
               value="GBPConverted"
-              status={checked === "GBPConverted" ? "checked" : "unchecked"}
-              onPress={() => setChecked("GBPConverted")}
+              status={checked2 === "GBPConverted" ? "checked" : "unchecked"}
+              onPress={() => setChecked2("GBPConverted")}
             />
             <Text>GBP</Text>
           </View>
@@ -86,7 +87,7 @@ export default function Calculator() {
           <TextInput
             label="Converted Value"
             value={textcon}
-            onChangeText={(textcon) => setText(textcon)}
+            onChangeText={(textcon) => setTextcon(textcon)}
             mode="outlined"
             style={styles.textinput}
           />
