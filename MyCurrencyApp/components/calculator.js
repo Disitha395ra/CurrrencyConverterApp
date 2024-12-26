@@ -12,7 +12,7 @@ import React from "react";
 export default function Calculator() {
     const [text, setText] = React.useState("");
     const [checked, setChecked] = React.useState("LKR");
-
+    const [textcon, setTextcon] = React.useState("");
     return (
       <View style={styles.container}>
         <PaperProvider>
@@ -80,7 +80,16 @@ export default function Calculator() {
           <Button icon="backup-restore" mode="contained">
             Convert
           </Button>
-          <Divider style={styles.divider}/>
+          <Divider style={styles.divider} />
+
+          <Text variant="titleLarge">Result</Text>
+          <TextInput
+            label="Converted Value"
+            value={textcon}
+            onChangeText={(textcon) => setText(textcon)}
+            mode="outlined"
+            style={styles.textinput}
+          />
         </PaperProvider>
       </View>
     );
