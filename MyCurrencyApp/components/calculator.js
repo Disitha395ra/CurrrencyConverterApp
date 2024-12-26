@@ -22,7 +22,18 @@ export default function Calculator() {
     }
 
     const handleconversion = () => {
+        const sourceCurrency = checked1;
+        const targetCurrency = checked2;
+        const value = parseFloat(text);
 
+        if(isNaN(value)){
+            alert("Please Enter a Valid Number");
+            return;
+        }
+
+        const rate = conversionRates[sourceCurrency][targetCurrency];
+        const convertedValue = value * rate;
+        setTextcon(convertedValue.toString());
     }
 
     return (
