@@ -129,6 +129,7 @@ export default function Calculator() {
             icon="backup-restore"
             mode="contained"
             onPress={handlereset}
+            buttonColor="green"
           >
             Reset
           </Button>
