@@ -13,7 +13,6 @@ export default function App() {
             <Image
               source={require("./assets/banner.png")}
               style={styles.banner}
-              resizeMode="cover"
             />
           </PaperProvider>
         </ScrollView>
@@ -32,5 +31,6 @@ const styles = StyleSheet.create({
   banner: {
     width: "100%", 
     height: 200, 
+    position:"center",
   },
 });
