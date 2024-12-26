@@ -15,22 +15,32 @@ export default function Calculator() {
     return (
       <View style={styles.container}>
         <PaperProvider>
-          <Text variant="titleLarge">Calculator</Text>
-          <RadioButton
-            value="LKR"
-            status={checked === "LKR" ? "checked" : "unchecked"}
-            onPress={() => setChecked("LKR")} 
-          />
-          <RadioButton
-            value="USD"
-            status={checked === "USD" ? "checked" : "unchecked"}
-            onPress={() => setChecked("USD")}
-          />
-          <RadioButton
-            value="GBP"
-            status={checked === "GBP" ? "checked" : "unchecked"}
-            onPress={() => setChecked("GBP")}
-          />
+          <Text variant="titleLarge">Currency Calculator 💱</Text>
+          <View style={styles.radiobutton}>
+            <RadioButton
+              value="LKR"
+              status={checked === "LKR" ? "checked" : "unchecked"}
+              onPress={() => setChecked("LKR")}
+            />
+            <Text>LKR</Text>
+          </View>
+          <View style={styles.radiobutton}>
+            <RadioButton
+              value="USD"
+              status={checked === "USD" ? "checked" : "unchecked"}
+              onPress={() => setChecked("USD")}
+            />
+            <Text>USD</Text>
+          </View>
+          <View style={styles.radiobutton}>
+            <RadioButton
+              value="GBP"
+              status={checked === "GBP" ? "checked" : "unchecked"}
+              onPress={() => setChecked("GBP")}
+            />
+            <Text>GBP</Text>
+          </View>
+
           <TextInput
             label="Enter Currency value You Want to Convert"
             value={text}
@@ -38,7 +48,41 @@ export default function Calculator() {
             mode="outlined"
             style={styles.textinput}
           />
-          <Divider/>
+          <Divider />
+
+          <Text variant="titleMedium">Converted Currency</Text>
+          <View style={styles.radiobutton}>
+            <RadioButton
+              value="LKR"
+              status={checked === "LKR" ? "checked" : "unchecked"}
+              onPress={() => setChecked("LKR")}
+            />
+            <Text>LKR</Text>
+          </View>
+          <View style={styles.radiobutton}>
+            <RadioButton
+              value="USD"
+              status={checked === "USD" ? "checked" : "unchecked"}
+              onPress={() => setChecked("USD")}
+            />
+            <Text>USD</Text>
+          </View>
+          <View style={styles.radiobutton}>
+            <RadioButton
+              value="GBP"
+              status={checked === "GBP" ? "checked" : "unchecked"}
+              onPress={() => setChecked("GBP")}
+            />
+            <Text>GBP</Text>
+          </View>
+
+          <TextInput
+            label="Enter Currency value You Want to Convert"
+            value={text}
+            onChangeText={(text) => setText(text)}
+            mode="outlined"
+            style={styles.textinput}
+          />
         </PaperProvider>
       </View>
     );
@@ -50,9 +94,13 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     justifyContent: "center",
   },
-  textinput:{
-    width:"100%",
+  textinput: {
+    width: "100%",
     marginVertical: 20,
-    borderRadius: 10 ,
+    borderRadius: 10,
+  },
+  radiobutton:{
+    flexDirection: "row",
+    alignItems: "center",
   }
 });
