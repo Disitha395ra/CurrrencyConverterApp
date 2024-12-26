@@ -36,6 +36,13 @@ export default function Calculator() {
         setTextcon(convertedValue.toString());
     }
 
+    const handlereset = () => {
+        setText("");
+        setTextcon("");
+        setChecked1("LKR");
+        setChecked2("LKRConverted");
+    }
+
     return (
       <View style={styles.container}>
         <PaperProvider>
@@ -101,7 +108,7 @@ export default function Calculator() {
           </View>
 
           <Button
-            icon="backup-restore"
+            icon="brightness-percent"
             mode="contained"
             onPress={handleconversion}
           >
@@ -118,6 +125,13 @@ export default function Calculator() {
             style={styles.textinput}
             editable={false}
           />
+          <Button
+            icon="backup-restore"
+            mode="contained"
+            onPress={handlereset}
+          >
+            Reset
+          </Button>
         </PaperProvider>
       </View>
     );
