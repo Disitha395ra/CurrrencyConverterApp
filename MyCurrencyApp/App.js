@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View, ScrollView, Image } from "react-native";
-import { PaperProvider,Text } from "react-native-paper";
+import { PaperProvider,Text,Divider } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function App() {
@@ -9,11 +9,14 @@ export default function App() {
       <SafeAreaView>
         <ScrollView>
           <PaperProvider>
-            <Text>rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr</Text>
+            <Text>
+              rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+            </Text>
             <Image
               source={require("./assets/banner.png")}
               style={styles.banner}
             />
+            <Divider style={styles.divider} />
           </PaperProvider>
         </ScrollView>
       </SafeAreaView>
@@ -29,8 +32,13 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   banner: {
-    width: "100%", 
-    height: 200, 
-    position:"center",
+    width: "100%",
+    height: 200,
+    position: "center",
   },
+  divider:{
+    height: 1,
+    backgroundColor: "#000",
+    marginVertical: 10,
+  }
 });
