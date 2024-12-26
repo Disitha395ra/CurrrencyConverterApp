@@ -5,7 +5,7 @@ export default function Calculator() {
   return (
     <View style={styles.container}>
       <PaperProvider>
-        <Text>Calculator</Text>
+        <Text variant="titleMedium">Calculator</Text>
       </PaperProvider>
     </View>
   );
