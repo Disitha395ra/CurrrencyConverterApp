@@ -14,6 +14,13 @@ export default function Calculator() {
     const [checked1, setChecked1] = React.useState("LKR");
     const [checked2, setChecked2] = React.useState("LKRConverted");
     const [textcon, setTextcon] = React.useState("");
+
+    const conversionRates = {
+        LKR : {LKR:1, USD:0.003, GBP:0.002},
+        USD : {LKR:333, USD:1, GBP:0.8},
+        GBP : {LKR:500, USD:1.25, GBP:1},
+    }
+
     return (
       <View style={styles.container}>
         <PaperProvider>
